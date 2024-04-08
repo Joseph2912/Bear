@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(AudioSource))]
 public class ScreenShooter : MonoBehaviour
@@ -12,17 +13,21 @@ public class ScreenShooter : MonoBehaviour
     public List<Texture> CameraRoll;    
     [Tooltip("Use una funcion que reciba un Texture para recibir la fotografía y aplicarla al UI")]
     [SerializeField] UnityEvent<Texture> OnTakePic;
-    public UnityEvent BeforeShooting, AfterShooting;
+    public GameObject ultimaFoto;
 
     Texture _lastTexture;
-    AudioSource AS;
 
-    private void Start() {
-        AS = gameObject.GetComponent<AudioSource>();
-        AS.playOnAwake = false;
-        AS.clip = (AudioClip)Resources.Load("Audios/sFx/CanonShoot");
+    public GameObject cameraHUD, mainHUD, mainCamera, pictureCamera;
+
+    public GameObject[] fotosTomadas;
+    public int fotosIndex = 0;
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+            TakePic();
     }
-    
+
     IEnumerator RecordFrame()
     {
         yield return new WaitForEndOfFrame(); //esperamos el final del frame para asegurarse que esté dibujado todo en pantalla
@@ -30,7 +35,26 @@ public class ScreenShooter : MonoBehaviour
         LastPic = texture; //almacenamos la textura como última fotografía
         CameraRoll.Add(LastPic); //añadimos la foto al rollo
         OnTakePic?.Invoke(LastPic); //enviamos la foto tomada por el evento
-        AfterShooting?.Invoke();
+        
+        ultimaFoto.SetActive(true);
+        ultimaFoto.GetComponent<RawImage>().texture = LastPic;
+
+        GuardarFoto();
+
+        StartCoroutine(ApagarCamara());
+    }
+
+    IEnumerator ApagarCamara()
+    {
+        yield return new WaitForSeconds(2f);
+
+        mainCamera.SetActive(true);
+
+        cameraHUD.SetActive(false);
+        pictureCamera.SetActive(false);
+
+        ultimaFoto.SetActive(false);
+        mainHUD.SetActive(true);
     }
 
     /// <summary>
@@ -38,12 +62,12 @@ public class ScreenShooter : MonoBehaviour
     /// </summary>
     public void TakePic()
     {
-        BeforeShooting?.Invoke();
-        AS.Play();
         StartCoroutine(RecordFrame());
     }
 
-    public void DeletePicInIndex(int index){
-        CameraRoll.RemoveAt(index);
+    public void GuardarFoto()
+    {
+        fotosTomadas[fotosIndex].GetComponent<RawImage>().texture = CameraRoll[CameraRoll.Count - 1];
+        fotosIndex++;
     }
 }

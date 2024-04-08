@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1366
     height: 685
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 111
+  controlID: 48
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 112
+  controlID: 49
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -295,8 +295,8 @@ MonoBehaviour:
     y: 0
     width: 295
     height: 635
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -760,7 +760,7 @@ MonoBehaviour:
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: UnityEditor.SceneViewCameraOverlay
-      index: 9
+      index: 10
       layout: 4
       size: {x: 0, y: 0}
       sizeOverriden: 0
@@ -788,9 +788,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -604.98444, y: -11.151705, z: 156.20772}
+    m_Target: {x: 421, y: 195, z: 0}
     speed: 2
-    m_Value: {x: -256.12643, y: -3.2262044, z: 45.54838}
+    m_Value: {x: 421, y: 195, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -836,13 +836,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.14497618, y: -0.20702933, z: 0.031037647, w: -0.9670362}
+    m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
-    m_Value: {x: -0.14497608, y: -0.20702918, z: 0.031037625, w: -0.9670355}
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 10.727131
+    m_Target: 242.51648
     speed: 2
-    m_Value: 10.265197
+    m_Value: 242.51648
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -904,9 +904,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 28740000
-      m_LastClickedID: 29736
-      m_ExpandedIDs: 4ce3ffff
+      m_SelectedIDs: a4af0000
+      m_LastClickedID: 44964
+      m_ExpandedIDs: 1e40ffffc642ffffc843ffff707fffff2c8affff9aa0ffff8ab7ffff5ccdffff08e5ffff10fbffffa4af0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1330,7 +1330,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/animales/Aniimales Busqueda Controllers
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1338,16 +1338,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 57
   m_LastFolders:
-  - Assets/Prefabs/animales/Aniimales Busqueda Controllers
+  - Assets/Scripts
   m_LastFoldersGridSize: 57
   m_LastProjectPath: C:\Users\ricky\OneDrive\Documentos\UAO\2024-01\Videojuegos\Bear\Bear\bear
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 127}
-    m_SelectedIDs: 38860000
-    m_LastClickedID: 34360
-    m_ExpandedIDs: 00000000465900004e5900005a5900005e59000062590000665900006a5900006e5900007a5900007e5900008659000092590000be590000da5900008481000086810000888100008a8100008c8100008e8100009081000092810000948100009e81000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 1214}
+    m_SelectedIDs: 40710000
+    m_LastClickedID: 28992
+    m_ExpandedIDs: 0000000060700000627000006470000066700000687000006a7000006c7000006e70000070700000727000007470000076700000787000007a7000007c7000007e70000080700000827000008470000086700000887000009670000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1375,7 +1375,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004e5900005a5900005e5900006a5900006e5900007a5900007e5900008659000092590000be590000da5900008481000086810000888100008a8100008c8100008e810000908100009281000094810000
+    m_ExpandedIDs: 0000000060700000627000006470000066700000687000006a7000006c7000006e70000070700000727000007470000076700000787000007a7000007c7000007e7000008070000082700000847000008670000088700000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1402,7 +1402,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000c27d0000c07d0000481b010026880000a4c30100526f000000900000000000005cdf0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1501,7 +1501,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 30808
+  m_LastSelectedObjectID: 44964
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52

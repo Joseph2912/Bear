@@ -369,9 +369,10 @@
 "Assets/Prefabs/Desert/4_Scripts/SunControl.cs"
 "Assets/Prefabs/Forest/Shared Scripts/UVOffset.cs"
 "Assets/Scripts/AnimalesMovement.cs"
+"Assets/Scripts/MouseLook.cs"
+"Assets/Scripts/PictureController.cs"
 "Assets/Scripts/RandomMovement.cs"
 "Assets/Scripts/ScreenShooter.cs"
-"Assets/Scripts/T1C5A.cs"
 -langversion:9.0
 
 /deterministic
