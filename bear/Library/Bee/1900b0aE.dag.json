@@ -23472,8 +23472,13 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp",
       "DisplayName": "Writing Assembly-CSharp.rsp",
       "ActionType": "WriteFile",
+<<<<<<< Updated upstream
       "PayloadOffset": 1769399,
       "PayloadLength": 34039,
+=======
+      "PayloadOffset": 1484819,
+      "PayloadLength": 33572,
+>>>>>>> Stashed changes
       "PayloadDebugContentSnippet": "-target:library\r\n-out:\"Library",
       "Inputs": [],
       "Outputs": [
@@ -23485,7 +23490,11 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp2",
       "DisplayName": "Writing Assembly-CSharp.rsp2",
       "ActionType": "WriteFile",
+<<<<<<< Updated upstream
       "PayloadOffset": 1803525,
+=======
+      "PayloadOffset": 1518478,
+>>>>>>> Stashed changes
       "PayloadLength": 0,
       "PayloadDebugContentSnippet": "",
       "Inputs": [],
@@ -23740,6 +23749,7 @@
         "Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll",
         "Assets/AbstractTargetFollower.cs",
         "Assets/AutoCam.cs",
+        "Assets/CameraController.cs",
         "Assets/carro.cs",
         "Assets/PivotBasedCameraRig.cs",
         "Assets/Prefabs/Desert/4_Scripts/FlickerLight.cs",
@@ -23994,8 +24004,13 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll.mvfrm.rsp",
       "DisplayName": "Writing Assembly-CSharp.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
+<<<<<<< Updated upstream
       "PayloadOffset": 1803621,
       "PayloadLength": 9969,
+=======
+      "PayloadOffset": 1518574,
+      "PayloadLength": 9606,
+>>>>>>> Stashed changes
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [

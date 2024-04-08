@@ -363,6 +363,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/AbstractTargetFollower.cs"
 "Assets/AutoCam.cs"
+"Assets/CameraController.cs"
 "Assets/carro.cs"
 "Assets/PivotBasedCameraRig.cs"
 "Assets/Prefabs/Desert/4_Scripts/FlickerLight.cs"
