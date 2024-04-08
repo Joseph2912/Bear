@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class PictureController : MonoBehaviour
 {
     public GameObject cameraHUD, mainHUD, mainCamera, pictureCamera;
+    public bool isCameraOn = false;
 
     private void Update()
     {
@@ -17,10 +18,23 @@ public class PictureController : MonoBehaviour
     }
 
     public void OpenCameraView(){
-        mainCamera.SetActive(false);
-        pictureCamera.SetActive(true);
-        cameraHUD.SetActive(true);
-        mainHUD.SetActive(false);
+        if (isCameraOn)
+        {
+            mainCamera.SetActive(true);
+            pictureCamera.SetActive(false);
+            cameraHUD.SetActive(false);
+            mainHUD.SetActive(true);
+            isCameraOn = !isCameraOn;
+        }
+        else
+        {
+            mainCamera.SetActive(false);
+            pictureCamera.SetActive(true);
+            cameraHUD.SetActive(true);
+            mainHUD.SetActive(false);
+            isCameraOn = !isCameraOn;
+        }
+        
     }
 
     //public void TakeAPhoto(Texture photo){

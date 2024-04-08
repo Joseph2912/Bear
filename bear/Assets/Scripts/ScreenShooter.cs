@@ -20,12 +20,27 @@ public class ScreenShooter : MonoBehaviour
     public GameObject cameraHUD, mainHUD, mainCamera, pictureCamera;
 
     public GameObject[] fotosTomadas;
+    public GameObject[] fotosFinales;
     public int fotosIndex = 0;
+
+    public LayerMask capasObjetos;
+    private RaycastHit hit;
+
+    public GameObject canvasFinal;
+    public GameObject player;
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-            TakePic();
+        Ray rayo = pictureCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(rayo, out hit, Mathf.Infinity, capasObjetos))
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                TakePic();
+                hit.collider.gameObject.GetComponent<CapsuleCollider>().enabled = false;
+            }
+        }
     }
 
     IEnumerator RecordFrame()
@@ -55,6 +70,16 @@ public class ScreenShooter : MonoBehaviour
 
         ultimaFoto.SetActive(false);
         mainHUD.SetActive(true);
+
+        if (fotosIndex == 6)
+        {
+            player.GetComponent<CarController>().enabled = false;
+            canvasFinal.SetActive(true);
+            for(int i = 0; i < CameraRoll.Count; i++)
+            {
+                fotosFinales[i].GetComponent<RawImage>().texture = CameraRoll[i];
+            }
+        }
     }
 
     /// <summary>
